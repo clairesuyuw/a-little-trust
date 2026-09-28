@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Listen to Miso and earn a shy kitten's trust." />
+    <title>A Little Trust</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ed7548'/%3E%3Cpath d='M15 29 17 13l13 9h4l13-9 2 16a20 20 0 1 1-34 0' fill='%23fff1d5'/%3E%3Ccircle cx='25' cy='34' r='3' fill='%233c302c'/%3E%3Ccircle cx='39' cy='34' r='3' fill='%233c302c'/%3E%3Cpath d='m29 41 3 2 3-2' fill='none' stroke='%233c302c' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="A Little Trust">
+          <span class="paw" aria-hidden="true">🐾</span>
+          <span>A Little Trust</span>
+        </div>
+        <button class="sound-button" id="soundButton" type="button" aria-pressed="true" aria-label="Turn sound off">
+          <span aria-hidden="true">♪</span> Sound on
+        </button>
+      </header>
+
+      <section class="game-card" aria-labelledby="gameTitle">
+        <div class="scene" id="scene">
+          <div class="sparkles" aria-hidden="true">✦ <span>·</span> ✧</div>
+          <img class="kitten" id="kitten" src="cat-trust-art.png" alt="Miso, a shy orange kitten" />
+          <div class="ground-shadow" aria-hidden="true"></div>
+        </div>
+
+        <div class="play-panel">
+          <div class="round-label" id="roundLabel">MISO'S REQUEST · 1 OF 5</div>
+          <h1 id="gameTitle">What does Miso need?</h1>
+
+          <div class="speech-card" id="speechCard" aria-live="polite">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p id="requestText">My tummy is rumbling... Could I have something from the sea?</p>
+          </div>
+
+          <div class="trust-block">
+            <div class="trust-heading">
+              <span>Trust</span>
+              <span id="trustValue">20 / 100</span>
+            </div>
+            <div class="trust-track" role="progressbar" aria-label="Miso's trust" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
+              <div class="trust-fill" id="trustFill"></div>
+            </div>
+            <p class="trust-note" id="trustNote">Miso is watching you carefully.</p>
+          </div>
+
+          <div class="choices" id="choices" aria-label="Choose an item"></div>
+
+          <div class="feedback" id="feedback" aria-live="assertive" hidden></div>
+        </div>
+      </section>
+
+      <p class="hint" id="hint">Choose the thing Miso is asking for.</p>
+    </main>
+
+    <div class="celebration" id="celebration" hidden aria-hidden="true"></div>
+    <script src="game.js"></script>
+  </body>
+</html>
