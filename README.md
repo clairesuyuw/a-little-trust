@@ -2,7 +2,7 @@
 
 ## Original idea
 
-I wanted to create a small game for people who enjoy cats and gentle, cozy interactions. When someone correctly chooses the item Miso asks for, the experience should increase her trust; after enough correct choices, Miso should feel safe and nuzzle the player.
+I wanted to create a small game for people who enjoy cats and gentle, cozy interactions. When someone correctly chooses the cat Miso asks for, the experience should increase her trust; after enough correct choices, Miso should feel safe and nuzzle the player.
 
 ## How to play
 
@@ -20,6 +20,11 @@ An important design decision was to use short clue-like requests instead of dire
 
 ## Reflection
 
-The finished interaction matches my original intention: Miso asks for something, the player chooses among three objects, and the trust meter clearly responds to the decision. I tested both correct and incorrect choices. Correct answers highlight the requested object, show a happy response, and add 20 trust points. Incorrect answers identify the object Miso actually wanted and remove 10 points without allowing the score to fall below zero. If the meter reaches zero, Miso gets upset, leaves the scene, and the game stops until the player chooses to try again. I also changed the choices so their positions are shuffled each round; this keeps the player from succeeding by memorizing a button position.
+The finished interaction basiaclly matches my original intention: Miso asks for something, the player chooses among three objects, and the trust meter clearly responds to the decision. I tested both correct and incorrect choices. Correct answers highlight the requested object, show a happy response, and add 20 trust points. Incorrect answers identify the object Miso actually wanted and remove 10 points without allowing the score to fall below zero. If the meter reaches zero, Miso gets upset, leaves the scene, and the game stops until the player chooses to try again. I also changed the choices so their positions are shuffled each round; this keeps the player from succeeding by memorizing a button position.
+
+However, there is a slight mismatch: because I chose this specific art style for the kitten, its expression is fixed; it does not change to reflect whether the player’s choice is correct or incorrect. This represents a discrepancy between the AI ​​design and my own original vision.
 
 AI helped turn the idea into working HTML, CSS, and JavaScript and suggested useful states such as visible feedback, a progress meter, sound control, and a replay button. I still had to decide the tone, scoring, clue difficulty, and what “trust” should look like at the end. The final nuzzling animation communicates the emotional goal well. One uncertainty is whether all players will understand every clue immediately. If I revised the game again, I would test it with several people and simplify any clue that causes repeated confusion.
+
+
+Start playing: https://clairesuyuw.github.io/a-little-trust/
